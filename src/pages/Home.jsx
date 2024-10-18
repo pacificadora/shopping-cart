@@ -28,13 +28,16 @@ const Home = () => {
   return (
     <div>
       {
-        loading ? (<Spinner></Spinner>) : (
-          posts.length > 0 ? (<div>
-            {
-              posts.map((post) => (<Product key={post.id} post={post}></Product>))
-            }
-          </div>) : (<div>No Data Found</div>)
-        )
+        loading ? (<Spinner></Spinner>) :
+          (
+            posts.length > 0 ?
+              (<div>
+                {
+                  posts.map((post) => (<Product key={post.id} post={post}></Product>))
+                }
+              </div>) :
+              (<div>No Data Found</div>)
+          )
       }
     </div>
   )
